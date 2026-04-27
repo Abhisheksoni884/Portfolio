@@ -66,13 +66,13 @@ export default function Home() {
             </div>
 
             {/* Left-aligned headline */}
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-foreground mb-8 leading-tight animate-fadeInUp text-left">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight animate-fadeInUp text-left">
               Building <span className="text-primary">Production-Scale</span> <br />
               <span className="text-primary">AI Systems</span>
             </h1>
 
             {/* Left-aligned description */}
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl animate-fadeInUp text-left">
+            <p className="text-base md:text-lg text-muted-foreground mb-10 leading-relaxed max-w-3xl animate-fadeInUp text-left">
               1.5+ years architecting agentic systems, multimodal AI pipelines, and LLM-powered voice applications. Specialized in FastAPI services, RAG architectures, and full-stack AI integration.
             </p>
 
@@ -97,8 +97,8 @@ export default function Home() {
             {/* Left-aligned social links */}
             <div className="flex gap-4 justify-start animate-fadeInUp">
               {[
-                { icon: Github, label: 'GitHub', href: 'https://github.com', color: 'hover:bg-gray-800 hover:text-white' },
-                { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/abhishek-soni', color: 'hover:bg-primary hover:text-white' },
+                { icon: Github, label: 'GitHub', href: 'https://github.com/Abhisheksoni884', color: 'hover:bg-gray-800 hover:text-white' },
+                { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/abhishek-soni-27085524b/', color: 'hover:bg-primary hover:text-white' },
                 { icon: Mail, label: 'Email', href: 'mailto:abhisheksoni1908@gmail.com', color: 'hover:bg-primary hover:text-white' }
               ].map(({ icon: Icon, label, href, color }, i) => (
                 <a
@@ -146,16 +146,16 @@ export default function Home() {
           <div className="mb-16">
             <span className="text-primary font-semibold text-sm">ABOUT ME</span>
             <div className="h-1 w-16 bg-gradient-to-r from-primary via-accent to-primary rounded-full mt-3 mb-6" />
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground max-w-3xl text-left">Transforming Ideas Into Intelligent Systems</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground max-w-3xl text-left">Transforming Ideas Into Intelligent Systems</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl">
             <div className="scroll-fade" id="about-content">
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed animate-fadeInUp text-left">
+              <p className="text-base text-muted-foreground mb-5 leading-relaxed animate-fadeInUp text-left">
                 I'm passionate about building scalable, production-ready AI systems that solve real-world problems. My expertise spans the full spectrum of AI development—from model architecture and optimization to deployment and monitoring.
               </p>
 
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed animate-fadeInUp text-left">
+              <p className="text-base text-muted-foreground mb-6 leading-relaxed animate-fadeInUp text-left">
                 Currently at Cogbee Technologies, I architect real-time AI systems with sub-300ms latency and develop advanced computer vision pipelines. I thrive on transforming complex ML challenges into elegant, efficient solutions.
               </p>
 
@@ -194,10 +194,10 @@ export default function Home() {
           <div className="mb-16">
             <span className="text-primary font-semibold text-sm">PROFESSIONAL JOURNEY</span>
             <div className="h-1 w-16 bg-gradient-to-r from-primary via-accent to-primary rounded-full mt-3 mb-6" />
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground text-left">Experience</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground text-left">Experience</h2>
           </div>
 
-          <div className="space-y-8 max-w-5xl">
+          <div className="space-y-6 max-w-4xl">
             {[
               {
                 title: 'AI/ML Engineer',
@@ -226,25 +226,25 @@ export default function Home() {
             ].map((exp, idx) => (
               <div
                 key={exp.title}
-                className="scroll-fade card-premium p-8 md:p-10 border-l-4 border-amber-400 hover:border-amber-600 transition-colors duration-300 bg-slate-50/30"
+                className="scroll-fade card-premium p-5 md:p-6 border-l-4 border-amber-400 hover:border-amber-600 transition-colors duration-300 bg-slate-50/30"
                 id={`exp-${idx}`}
               >
-                <div className="flex justify-between items-start mb-6 flex-col md:flex-row gap-4">
+                <div className="flex justify-between items-start mb-4 flex-col md:flex-row gap-2">
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">{exp.title}</h3>
-                    <p className="text-primary font-semibold text-lg">{exp.company}</p>
+                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1">{exp.title}</h3>
+                    <p className="text-primary font-semibold text-base">{exp.company}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-muted-foreground font-medium">{exp.period}</p>
-                    <p className="text-muted-foreground text-sm">{exp.location}</p>
+                    <p className="text-muted-foreground font-medium text-sm">{exp.period}</p>
+                    <p className="text-muted-foreground text-xs">{exp.location}</p>
                   </div>
                 </div>
 
-                <ul className="space-y-3">
+                <ul className="space-y-2.5">
                   {exp.achievements.map((achievement, i) => (
-                    <li key={achievement} className="flex gap-3 text-foreground animate-fadeInUp text-left" style={{ animationDelay: `${i * 0.1}s` }}>
-                      <span className="text-yellow-600 font-bold flex-shrink-0">→</span>
-                      <span className="text-lg">{achievement}</span>
+                    <li key={achievement} className="flex gap-2 text-foreground animate-fadeInUp text-left" style={{ animationDelay: `${i * 0.1}s` }}>
+                      <span className="text-yellow-600 font-bold flex-shrink-0 text-sm">→</span>
+                      <span className="text-sm leading-relaxed">{achievement}</span>
                     </li>
                   ))}
                 </ul>
@@ -260,10 +260,10 @@ export default function Home() {
           <div className="center-content mb-16">
             <span className="text-primary font-semibold text-sm">FEATURED WORK</span>
             <div className="h-1 w-16 bg-gradient-to-r from-primary via-accent to-primary rounded-full mt-3 mb-6" />
-            <h2 className="text-5xl md:text-6xl font-bold text-primary">Projects</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary">Projects</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
               {
                 icon: Zap,
@@ -301,18 +301,18 @@ export default function Home() {
                   className="scroll-fade card-premium overflow-hidden group hover:border-amber-400 transition-colors duration-300 border border-border bg-white"
                   id={`project-${idx}`}
                 >
-                  <div className="p-8 h-48 flex items-center justify-center relative overflow-hidden bg-slate-50/50">
-                    <Icon className="w-20 h-20 transition-all duration-500 text-primary/30 group-hover:text-amber-400 group-hover:scale-110" />
+                  <div className="p-6 h-36 flex items-center justify-center relative overflow-hidden bg-slate-50/50">
+                    <Icon className="w-14 h-14 transition-all duration-500 text-primary/30 group-hover:text-amber-400 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/0 to-amber-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
 
-                  <div className="p-8 bg-white h-full">
-                    <h3 className="text-2xl font-bold text-primary mb-3 transition-colors duration-300">{project.title}</h3>
-                    <p className="text-muted-foreground mb-4 text-base leading-relaxed">{project.description}</p>
+                  <div className="p-6 bg-white h-full">
+                    <h3 className="text-lg font-bold text-primary mb-3 transition-colors duration-300 leading-snug">{project.title}</h3>
+                    <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{project.description}</p>
 
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.map(tag => (
-                        <span key={tag} className="px-3 py-1 bg-amber-50/50 text-primary text-xs font-semibold rounded-full border border-amber-200 group-hover:border-amber-400 transition-colors duration-300">
+                        <span key={tag} className="px-2.5 py-1 bg-amber-50/50 text-primary text-xs font-semibold rounded-full border border-amber-200 group-hover:border-amber-400 transition-colors duration-300">
                           {tag}
                         </span>
                       ))}
@@ -322,7 +322,7 @@ export default function Home() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary font-bold text-base hover:opacity-80 transition-opacity duration-300 flex items-center gap-1 group/link"
+                      className="text-primary font-bold text-sm hover:opacity-80 transition-opacity duration-300 flex items-center gap-1 group/link"
                     >
                       Learn More &gt;
                     </a>
@@ -340,32 +340,32 @@ export default function Home() {
           <div className="center-content mb-16">
             <span className="text-primary font-semibold text-sm">TECHNICAL EXPERTISE</span>
             <div className="h-1 w-16 bg-gradient-to-r from-primary via-accent to-primary rounded-full mt-3 mb-6" />
-            <h2 className="text-5xl md:text-6xl font-bold text-primary">Skills</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary">Skills</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
               { title: 'Programming', skills: ['Python', 'Java', 'C++', 'JavaScript', 'TypeScript'] },
-              { title: 'AI/ML & Deep Learning', skills: ['LLM', 'RAG', 'NLP', 'Computer Vision', 'PyTorch', 'TensorFlow', 'Langchain'] },
-              { title: 'AI/Voice Frameworks', skills: ['LiveKit', 'ElevenLabs', 'Video SDK', 'Google API', 'Whisper', 'STT/TTS'] },
-              { title: 'Frameworks & Tools', skills: ['FastAPI', 'Docker', 'PostgreSQL', 'Git', 'Streamlit'] },
+              { title: 'AI/ML & Deep Learning', skills: ['LLM', 'RAG', 'NLP', 'Computer Vision', 'PyTorch', 'TensorFlow', 'Scikit-learn', 'Langchain'] },
+              { title: 'AI/Voice Frameworks', skills: ['LiveKit', 'ElevenLabs', 'Video SDK', 'Whisper', 'STT/TTS'] },
+              { title: 'Frameworks & Tools', skills: ['FastAPI', 'Django', 'REST API', 'Docker', 'PostgreSQL', 'Git', 'Streamlit'] },
               { title: 'Web Development', skills: ['HTML', 'CSS', 'Tailwind CSS', 'Bootstrap', 'React'] },
               { title: 'DevOps & Architecture', skills: ['Websockets', 'MCP', 'CI/CD', 'Microservices', 'RPC'] }
             ].map((category, idx) => (
               <div
                 key={category.title}
-                className="scroll-fade card-premium p-8 hover:shadow-lg hover:border-amber-400 transition-all duration-300 bg-slate-50/30 border border-border"
+                className="scroll-fade card-premium p-6 hover:shadow-lg hover:border-amber-400 transition-all duration-300 bg-slate-50/30 border border-border"
                 id={`skill-${idx}`}
               >
-                <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
-                  <span className="w-3 h-3 bg-gradient-to-r from-primary to-accent rounded-full" />
+                <h3 className="text-base font-bold text-foreground mb-4 flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-accent rounded-full" />
                   {category.title}
                 </h3>
-                <div className="space-y-3">
+                <div className="space-y-2.5">
                   {category.skills.map((skill, i) => (
                     <div key={skill} className="flex items-center gap-2 text-foreground hover:text-accent transition-colors duration-300 text-left" style={{ animationDelay: `${i * 0.05}s` }}>
-                      <span className="w-2 h-2 bg-gradient-to-r from-primary to-accent rounded-full" />
-                      <span className="text-base">{skill}</span>
+                      <span className="w-1.5 h-1.5 bg-gradient-to-r from-primary to-accent rounded-full" />
+                      <span className="text-sm">{skill}</span>
                     </div>
                   ))}
                 </div>
@@ -381,24 +381,24 @@ export default function Home() {
           <div className="mb-16">
             <span className="text-primary font-semibold text-sm">EDUCATION & CERTIFICATIONS</span>
             <div className="h-1 w-16 bg-gradient-to-r from-primary via-accent to-primary rounded-full mt-3 mb-6" />
-            <h2 className="text-5xl md:text-6xl font-bold text-primary text-left">Education</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary text-left">Education</h2>
           </div>
 
-          <div className="space-y-6 max-w-3xl">
+          <div className="space-y-5 max-w-3xl">
             {[
               { degree: 'MSc-IT', school: 'Aryan International College, Ajmer', score: '75%', year: '2023 - 2025' },
               { degree: 'BSc-IT', school: 'Aryan International College, Ajmer', score: '73.7%', year: '2020 - 2023' },
               { degree: 'AI/ML Training Certification', school: 'Inexture Solutions', score: 'Completed', year: '2025' }
             ].map((edu, idx) => (
-              <div key={edu.degree} className="scroll-fade card-premium p-8 border-r-4 border-accent transition-colors duration-300 card-sample-gradient" id={`edu-${idx}`}>
-                <div className="flex justify-between items-start">
+              <div key={edu.degree} className="scroll-fade card-premium p-5 border-r-4 border-accent transition-colors duration-300 card-sample-gradient" id={`edu-${idx}`}>
+                <div className="flex justify-between items-start gap-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-2">{edu.degree}</h3>
-                    <p className="text-muted-foreground text-lg">{edu.school}</p>
+                    <h3 className="text-xl font-bold text-foreground mb-1">{edu.degree}</h3>
+                    <p className="text-muted-foreground text-sm">{edu.school}</p>
                   </div>
-                  <div className="text-right">
-                    <p className="text-primary font-semibold text-lg">{edu.score}</p>
-                    <p className="text-muted-foreground text-sm">{edu.year}</p>
+                  <div className="text-right flex-shrink-0">
+                    <p className="text-primary font-semibold text-sm">{edu.score}</p>
+                    <p className="text-muted-foreground text-xs">{edu.year}</p>
                   </div>
                 </div>
               </div>
@@ -414,11 +414,11 @@ export default function Home() {
 
         <div className="container relative z-10">
           <div className="center-content max-w-3xl mx-auto">
-            <h2 className="text-6xl md:text-7xl font-bold mb-8 animate-fadeInUp">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeInUp">
               Let's Build Something <span className="text-accent">Amazing</span>
             </h2>
 
-            <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed animate-fadeInUp">
+            <p className="text-base md:text-lg text-white/90 mb-10 leading-relaxed animate-fadeInUp">
               I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hello, feel free to reach out!
             </p>
 
@@ -431,7 +431,7 @@ export default function Home() {
                 Email Me
               </button>
               <a
-                href="https://linkedin.com/in/abhishek-soni"
+                href="https://www.linkedin.com/in/abhishek-soni-27085524b/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-primary border-2 border-white text-white hover:opacity-90 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover-lift"
@@ -440,7 +440,7 @@ export default function Home() {
                 LinkedIn
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/Abhisheksoni884"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-primary border-2 border-white text-white hover:opacity-90 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover-lift"
