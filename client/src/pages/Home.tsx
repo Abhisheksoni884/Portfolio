@@ -59,7 +59,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             {/* Left-aligned badge */}
             <div className="mb-12 animate-fadeInUp">
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-50 text-primary font-semibold text-sm rounded-full border border-yellow-200 hover-glow">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50/50 text-primary font-semibold text-sm rounded-full border border-amber-200 hover:border-amber-400 hover:shadow-md transition-all duration-300">
                 <Sparkles className="w-4 h-4" />
                 AI/ML Engineer & Full-Stack Developer
               </span>
@@ -226,7 +226,7 @@ export default function Home() {
             ].map((exp, idx) => (
               <div
                 key={exp.title}
-                className="scroll-fade card-premium p-8 md:p-10 border-l-4 border-yellow-200 hover:border-yellow-400 transition-colors duration-300 bg-gradient-to-br from-white to-yellow-50/30"
+                className="scroll-fade card-premium p-8 md:p-10 border-l-4 border-amber-400 hover:border-amber-600 transition-colors duration-300 bg-slate-50/30"
                 id={`exp-${idx}`}
               >
                 <div className="flex justify-between items-start mb-6 flex-col md:flex-row gap-4">
@@ -298,20 +298,21 @@ export default function Home() {
               return (
                 <div
                   key={project.title}
-                  className="scroll-fade card-premium overflow-hidden group hover:border-accent transition-colors duration-300 border-2 border-border bg-white"
+                  className="scroll-fade card-premium overflow-hidden group hover:border-amber-400 transition-colors duration-300 border border-border bg-white"
                   id={`project-${idx}`}
                 >
-                  <div className="p-8 h-48 flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-yellow-50 via-white to-yellow-50">
-                    <Icon className="w-20 h-20 transition-all duration-500 text-gray-400 group-hover:text-accent group-hover:scale-110" />
+                  <div className="p-8 h-48 flex items-center justify-center relative overflow-hidden bg-slate-50/50">
+                    <Icon className="w-20 h-20 transition-all duration-500 text-primary/30 group-hover:text-amber-400 group-hover:scale-110" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/0 to-amber-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
 
                   <div className="p-8 bg-white h-full">
-                    <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">{project.title}</h3>
+                    <h3 className="text-2xl font-bold text-primary mb-3 transition-colors duration-300">{project.title}</h3>
                     <p className="text-muted-foreground mb-4 text-base leading-relaxed">{project.description}</p>
 
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.tags.map(tag => (
-                        <span key={tag} className="px-3 py-1 bg-yellow-50 text-primary text-xs font-semibold rounded-full border border-yellow-200 hover:border-primary transition-colors duration-300">
+                        <span key={tag} className="px-3 py-1 bg-amber-50/50 text-primary text-xs font-semibold rounded-full border border-amber-200 group-hover:border-amber-400 transition-colors duration-300">
                           {tag}
                         </span>
                       ))}
@@ -353,7 +354,7 @@ export default function Home() {
             ].map((category, idx) => (
               <div
                 key={category.title}
-                className="scroll-fade card-premium p-8 hover:shadow-lg hover:border-accent/50 transition-all duration-300 bg-gradient-to-br from-white to-indigo-50/20 border border-accent/50"
+                className="scroll-fade card-premium p-8 hover:shadow-lg hover:border-amber-400 transition-all duration-300 bg-slate-50/30 border border-border"
                 id={`skill-${idx}`}
               >
                 <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
@@ -389,7 +390,7 @@ export default function Home() {
               { degree: 'BSc-IT', school: 'Aryan International College, Ajmer', score: '73.7%', year: '2020 - 2023' },
               { degree: 'AI/ML Training Certification', school: 'Inexture Solutions', score: 'Completed', year: '2025' }
             ].map((edu, idx) => (
-              <div key={edu.degree} className="scroll-fade card-premium p-8 border-r-4 border-accent transition-colors duration-300 bg-gradient-to-br from-white to-indigo-50/30" id={`edu-${idx}`}>
+              <div key={edu.degree} className="scroll-fade card-premium p-8 border-r-4 border-accent transition-colors duration-300 card-sample-gradient" id={`edu-${idx}`}>
                 <div className="flex justify-between items-start">
                   <div>
                     <h3 className="text-2xl font-bold text-foreground mb-2">{edu.degree}</h3>

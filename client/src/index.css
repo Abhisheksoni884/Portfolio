@@ -527,8 +527,9 @@
 
   /* Gradient Background */
   .gradient-bg {
-    background: linear-gradient(135deg, #FEFCE8 0%, #FFFFFF 100%);
+    background: white;
   }
+
 
   .nav-scrolled {
     @apply bg-primary/95 text-white backdrop-blur-xl shadow-2xl border-b border-primary/20;
