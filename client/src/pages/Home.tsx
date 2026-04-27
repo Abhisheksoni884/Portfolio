@@ -266,10 +266,10 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
               {
-                icon: Zap,
-                title: 'AI Interview Agent',
-                description: 'Real-time AI interview agent using LiveKit with sub-300ms latency for human-like voice interactions.',
-                tags: ['LiveKit', 'Python', 'WebSocket', 'Real-time'],
+                icon: Code2,
+                title: 'Document Extraction & Form Automation',
+                description: 'Intelligent document parsing system that extracts data from PDF, DOCX, and multiple formats. Automatically populates form fields with extracted data.',
+                tags: ['Document Processing', 'OCR', 'Form Automation'],
                 link: 'https://github.com'
               },
               {
@@ -280,10 +280,10 @@ export default function Home() {
                 link: 'https://github.com'
               },
               {
-                icon: Code2,
-                title: 'Document Data Extraction & Form Automation',
-                description: 'Intelligent document parsing system that extracts data from PDF, DOCX, and multiple formats. Automatically populates form fields with extracted data.',
-                tags: ['Document Processing', 'OCR', 'Form Automation'],
+                icon: Zap,
+                title: 'AI Interview Agent',
+                description: 'Real-time AI interview agent using LiveKit with sub-300ms latency for human-like voice interactions.',
+                tags: ['LiveKit', 'Python', 'WebSocket', 'Real-time'],
                 link: 'https://github.com'
               },
               {
@@ -346,9 +346,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
               { title: 'Programming', skills: ['Python', 'Java', 'C++', 'JavaScript', 'TypeScript'] },
-              { title: 'AI/ML & Deep Learning', skills: ['LLM', 'RAG', 'NLP', 'Computer Vision', 'PyTorch', 'TensorFlow', 'Scikit-learn', 'Langchain'] },
+              { title: 'AI/ML & Deep Learning', skills: ['LLM', 'RAG', 'NLP', 'Computer Vision', 'PyTorch', 'TensorFlow', 'Langchain'] },
               { title: 'AI/Voice Frameworks', skills: ['LiveKit', 'ElevenLabs', 'Video SDK', 'Whisper', 'STT/TTS'] },
-              { title: 'Frameworks & Tools', skills: ['FastAPI', 'Django', 'REST API', 'Docker', 'PostgreSQL', 'Git', 'Streamlit'] },
+              { title: 'Frameworks & Tools', skills: ['FastAPI', 'Django', 'REST API', 'Docker', 'PostgreSQL', 'Streamlit'] },
               { title: 'Web Development', skills: ['HTML', 'CSS', 'Tailwind CSS', 'Bootstrap', 'React'] },
               { title: 'DevOps & Architecture', skills: ['Websockets', 'MCP', 'CI/CD', 'Microservices', 'RPC'] }
             ].map((category, idx) => (
