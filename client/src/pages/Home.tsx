@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Download, ChevronRight, ArrowRight, Code2, Brain, Zap, Award, Sparkles, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, ChevronRight, ArrowRight, Code2, Brain, Zap, Award, Sparkles, ExternalLink, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,15 +41,32 @@ export default function Home() {
                 </a>
               ))}
             </div>
-            <a
-              href="https://drive.google.com/uc?export=download&id=1UpOdSmGHWd6A3twwzo5IXdg0xkXGB98P"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`flex items-center gap-2 text-sm font-bold transition-all duration-300 px-4 py-2 rounded-lg ${isScrolled ? 'bg-accent text-primary hover:bg-accent/90' : 'bg-primary text-white hover:bg-primary/90'} hover-lift shadow-md`}
+            
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className={`md:hidden p-2 rounded-lg transition-colors duration-300 ${isScrolled ? 'text-white hover:bg-white/10' : 'text-primary hover:bg-primary/10'}`}
+              aria-label="Toggle menu"
             >
-              <Download className="w-4 h-4" />
-              Resume
-            </a>
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className={`md:hidden absolute top-16 left-0 right-0 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'} ${isScrolled ? 'bg-primary/95 backdrop-blur-xl' : 'bg-white/95 backdrop-blur-xl'} border-b ${isScrolled ? 'border-white/20' : 'border-border'} shadow-lg`}>
+          <div className="container py-4 flex flex-col gap-2">
+            {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item, index) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`text-base font-medium transition-all duration-300 py-3 px-4 rounded-lg ${isScrolled ? 'text-white/90 hover:text-white hover:bg-white/10' : 'text-foreground hover:text-primary hover:bg-primary/5'} hover:translate-x-2 hover:shadow-md animate-fadeInDown`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {item}
+              </a>
+            ))}
           </div>
         </div>
       </nav>
