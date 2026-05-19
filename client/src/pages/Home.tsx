@@ -288,28 +288,28 @@ export default function Home() {
                 title: 'Document Extraction & Form Automation',
                 description: 'Intelligent document parsing system that extracts data from PDF, DOCX, and multiple formats. Automatically populates form fields with extracted data.',
                 tags: ['Document Processing', 'OCR', 'Form Automation'],
-                link: 'https://github.com'
+                link: 'https://github.com/Abhisheksoni884/Document-Extraction-and-Form-Automation'
               },
               {
                 icon: Brain,
                 title: 'AI Proctoring Microservice',
                 description: 'FastAPI-based video analysis with speaker diarization, lip-sync detection, and gaze tracking. 60% performance improvement.',
                 tags: ['FastAPI', 'Computer Vision', 'Optimization'],
-                link: 'https://github.com'
+                link: 'https://github.com/Abhisheksoni884/Proctoring-Service'
               },
               {
                 icon: Zap,
-                title: 'AI Interview Agent',
-                description: 'Real-time AI interview agent using LiveKit with sub-300ms latency for human-like voice interactions.',
-                tags: ['LiveKit', 'Python', 'WebSocket', 'Real-time'],
-                link: 'https://github.com'
+                title: 'Vanzzzs - Admin Support Agent v2.1',
+                description: 'Universal AI-Powered Employee Data Retrieval System. Retrieves data from PostgreSQL databases using natural language queries.',
+                tags: ['LangChain', 'OpenAI', 'Streamlit', 'PostgreSQL'],
+                link: 'https://github.com/Abhisheksoni884/Vanzzzs---Admin-Support-Agent'
               },
               {
                 icon: Award,
-                title: 'AI Prescription Verification',
+                title: 'AI Prescription Verification Chatbot',
                 description: 'GenAI chatbot using LLM and Tesseract OCR for prescription verification with Streamlit interface.',
                 tags: ['LLM', 'OCR', 'Streamlit'],
-                link: 'https://github.com'
+                link: 'https://github.com/Abhisheksoni884/AI-Prescription-Verification-Chatbot'
               }
             ].map((project, idx) => {
               const Icon = project.icon;
